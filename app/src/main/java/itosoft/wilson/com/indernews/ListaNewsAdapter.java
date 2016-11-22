@@ -41,7 +41,7 @@ public class ListaNewsAdapter extends RecyclerView.Adapter<ListaNewsAdapter.View
         holder.nombreTextView.setText(n.getTexto());
 
         Glide.with(context)
-                .load("http://api.inder.gov.co:8080/uploads/noticias/" + n.getNumber() +".jpg")
+                .load(n.getImagen_url())
                 .centerCrop()
                 .crossFade()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
